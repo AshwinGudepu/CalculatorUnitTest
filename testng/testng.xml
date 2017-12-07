@@ -17,4 +17,10 @@
 			<class name="testng.Division" />
 		</classes>
 	</test>
+	
+	<test name="CalcTestSubtraction">
+		<classes>
+			<class name="testng.Subtraction" />
+		</classes>
+	</test>
 </suite>
