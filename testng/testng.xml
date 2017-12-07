@@ -1,12 +1,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="CalculatorTest" verbose="1">
-	<test name="CalcTest">
+	<test name="CalcTestAdd">
 		<parameter name="firstNumber" value="10"></parameter>
 		<parameter name="secondNumber" value="20"></parameter>
 		<parameter name="expected" value="30"></parameter>
 		<classes>
 			<class name="testng.AdditionTest" />
+		</classes>
+	</test>
+	<test name="CalcTestDivide">
+		<parameter name="firstNumber" value="9"></parameter>
+		<parameter name="secondNumber" value="3"></parameter>
+		<parameter name="expected" value="3"></parameter>
+		<classes>
+			<class name="testng.Division" />
 		</classes>
 	</test>
 </suite>
