@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CalculatorTest" verbose="1">
+	<test name="CalcTest">
+		<parameter name="firstNumber" value="10"></parameter>
+		<parameter name="secondNumber" value="20"></parameter>
+		<parameter name="expected" value="30"></parameter>
+		<classes>
+			<class name="testng.AdditionTest" />
+		</classes>
+	</test>
+</suite>
