@@ -12,14 +12,8 @@ public class Division extends BaseCalculator {
 		
 	@BeforeSuite
 	public void createCalcObject(){
-		calculator=new Calculator();
-		System.out.println("Before Suite");
-	}
-	
-	@BeforeMethod
-	public void intializingVariables(){		
-		System.out.println("Before Method");
-	}
+		calculator=new Calculator();		
+	}	
 	
 	@Test
 	@Parameters({ "firstNumber", "secondNumber", "expected" })

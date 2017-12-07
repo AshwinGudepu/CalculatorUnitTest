@@ -12,8 +12,7 @@ public class Subtraction extends BaseCalculator {
 	
 	@BeforeSuite
 	public void setUp(){
-		calculator=new Calculator();
-		System.out.println("Before Suite");
+		calculator=new Calculator();		
 	}
 
 	@Test(dataProvider = "subtractingFunctionality")
@@ -48,7 +47,7 @@ public class Subtraction extends BaseCalculator {
 	
 	@Test
 	public void subOnePositiveAndOneNegativeNumber() {
-		long result = calculator.sub(10, -5);
+		long result = calculator.sub(10, -5);		
 		Assert.assertEquals(result, 15);
 	}
 }

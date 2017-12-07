@@ -2,9 +2,9 @@
 
 <suite name="CalculatorTest" verbose="1">
 	<test name="CalcTestAdd">
-		<parameter name="firstNumber" value="10"></parameter>
-		<parameter name="secondNumber" value="20"></parameter>
-		<parameter name="expected" value="30"></parameter>
+		<parameter name="firstNum" value="10"></parameter>
+		<parameter name="secondNum" value="20"></parameter>
+		<parameter name="expectedRes" value="30"></parameter>
 		<classes>
 			<class name="testng.AdditionTest" />
 		</classes>
@@ -16,11 +16,15 @@
 		<classes>
 			<class name="testng.Division" />
 		</classes>
-	</test>
-	
+	</test>	
 	<test name="CalcTestSubtraction">
 		<classes>
 			<class name="testng.Subtraction" />
+		</classes>
+	</test>	
+	<test name="CalcTestMultiplication">
+		<classes>
+			<class name="testng.Multiplication" />
 		</classes>
 	</test>
 </suite>

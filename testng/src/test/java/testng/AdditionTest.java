@@ -14,20 +14,11 @@ public class AdditionTest extends BaseCalculator {
 
 	@BeforeSuite
 	public void createCalcObject(){
-		calculator=new Calculator();
-		System.out.println("Before Suite");
+		calculator=new Calculator();		
 	}
-	
-	@BeforeMethod
-	public void intializingVariables(){
-		long firstNumber=0;
-		long secondNumber=0;
-		long expected=0;
-		System.out.println("Before Method");
-	}
-	
+		
 	@Test
-	@Parameters({ "firstNumber", "secondNumber", "expected" })
+	@Parameters({ "firstNum", "secondNum", "expectedRes" })
 	public void sumOfTwoNumbers(long firstNumber, long secondNumber, long expected) {
 		long result = calculator.sum(firstNumber, secondNumber);
 		Assert.assertEquals(result, expected);
@@ -42,6 +33,12 @@ public class AdditionTest extends BaseCalculator {
 	@DataProvider(name = "numbersProvider")	
 	public Object[][] dataprovider() {
 		return new Object[][] { {3, 5, 8}, {-1, 8, 7} };
+	}
+	
+	@Test
+	public void sumOfTwoNegativeNumbers() {
+		long result = calculator.sum(-5, -10);
+		Assert.assertEquals(result, -15);
 	}
 	
 	@AfterSuite
