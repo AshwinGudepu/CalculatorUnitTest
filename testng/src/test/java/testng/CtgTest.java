@@ -1,10 +1,18 @@
 package testng;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import com.epam.tat.module4.Calculator;
 
 public class CtgTest extends BaseCalculator {
 
+	@BeforeSuite
+	public void setUp(){
+		calculator=new Calculator();		
+	}
+	
 	@Test
 	public void ctgZero() {
 		double result = calculator.ctg(0);

@@ -1,8 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="CalculatorTest" verbose="1">
-
-	 <test name="CalcTestAdd">
+	<test name="CalcTestAdd">
 		<parameter name="firstNum" value="10"></parameter>
 		<parameter name="secondNum" value="20"></parameter>
 		<parameter name="expectedRes" value="30"></parameter>
@@ -28,17 +27,34 @@
 			<class name="testng.Multiplication" />
 		</classes>
 	</test> 
-
-
 	<test name="CalcTestIsNegativeTest">	
 		<classes>
 			<class name="testng.IsNegativeTest" />
 		</classes>
 	</test>
-	
 	<test name="CalcTestIsPositivetest">	
 		<classes>
 			<class name="testng.IsPositiveTest" />
+		</classes>
+	</test>
+	<test name="CalcTestIsCosTest">	
+		<classes>
+			<class name="testng.CosTest" />
+		</classes>
+	</test>
+	<test name="CalcTestIsCtgTest">	
+		<classes>
+			<class name="testng.CtgTest" />
+		</classes>
+	</test>
+	<test name="CalcTestIsTanTest">	
+		<classes>
+			<class name="testng.TanTest" />
+		</classes>
+	</test>
+	<test name="CalcTestIsSquareRootTest">	
+		<classes>
+			<class name="testng.SquareRootTest" />
 		</classes>
 	</test>
 </suite>

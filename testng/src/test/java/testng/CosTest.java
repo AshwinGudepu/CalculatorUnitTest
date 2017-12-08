@@ -1,10 +1,18 @@
 package testng;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class CosTest extends BaseCalculator {
+import com.epam.tat.module4.Calculator;
 
+public class CosTest extends BaseCalculator {
+	
+	@BeforeSuite
+	public void setUp(){
+		calculator=new Calculator();		
+	}
+	
 	@Test
 	public void cosZero() {
 		double result = calculator.cos(0);

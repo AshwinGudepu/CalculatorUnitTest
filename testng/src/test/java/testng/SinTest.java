@@ -1,10 +1,17 @@
 package testng;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.epam.tat.module4.Calculator;
 
 public class SinTest extends BaseCalculator {
+	
+	@BeforeSuite
+	public void setUp(){
+		calculator=new Calculator();		
+	}
 	
 	@Test(dataProvider = "numbersProvider")
 	public void sinFunction(double degrees,double expected) {
@@ -15,8 +22,6 @@ public class SinTest extends BaseCalculator {
 	@DataProvider(name = "numbersProvider")	
 	public Object[][] dataprovider() {
 		return new Object[][] { {0, 0.0}, {30, 0.5}, {45, 0.70710678118}, {60, 0.86602540378}, {90, 1.0} };
-	}
-	
-	//Failing Tests: sin30,Sin45,sin60 and Sin 90
-	
+	}	
+	//Failing Tests: sin30,Sin45,sin60 and Sin 90	
 }

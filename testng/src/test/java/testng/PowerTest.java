@@ -1,9 +1,16 @@
 package testng;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import com.epam.tat.module4.Calculator;
 
 public class PowerTest extends BaseCalculator {
+	
+	@BeforeSuite
+	public void setUp(){
+		calculator=new Calculator();		
+	}
 	
 	@Test
 	public void powerOfPositiveNumber() {

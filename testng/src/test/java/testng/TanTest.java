@@ -1,14 +1,10 @@
 package testng;
 
 import org.testng.Assert;
-import org.testng.annotations.ExpectedExceptions;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
-import java.lang.*;
-
-public class tanTest extends BaseCalculator {
+public class TanTest extends BaseCalculator {
 	
 	@Test
 	public void tanZero() {
