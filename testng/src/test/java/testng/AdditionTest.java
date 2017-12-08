@@ -10,12 +10,7 @@ import org.testng.annotations.Test;
 
 import com.epam.tat.module4.Calculator;
 
-public class AdditionTest extends BaseCalculator {
-
-	@BeforeSuite
-	public void createCalcObject(){
-		calculator=new Calculator();		
-	}
+public class AdditionTest extends BaseCalculator {	
 		
 	@Test
 	@Parameters({ "firstNum", "secondNum", "expectedRes" })
@@ -39,11 +34,17 @@ public class AdditionTest extends BaseCalculator {
 	public void sumOfTwoNegativeNumbers() {
 		long result = calculator.sum(-5, -10);
 		Assert.assertEquals(result, -15);
-	}
+	}	
 	
-	@AfterSuite
-	public void tearDown(){
-		calculator=null;
-		System.out.println("After Suite");
-	}
+	@Test
+	public void sumOfOnePostiveNumberAndNegativeNumbers() {
+		long result = calculator.sum(5, -10);
+		Assert.assertEquals(result, -5);
+	}	
+	
+	@Test
+	public void sumOfOnePostiveNumberAndZero() {
+		long result = calculator.sum(5, 0);
+		Assert.assertEquals(result, 5);
+	}	
 }

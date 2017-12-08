@@ -1,7 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="CalculatorTest" verbose="1">
-	<test name="CalcTestAdd">
+
+	 <test name="CalcTestAdd">
 		<parameter name="firstNum" value="10"></parameter>
 		<parameter name="secondNum" value="20"></parameter>
 		<parameter name="expectedRes" value="30"></parameter>
@@ -16,15 +17,28 @@
 		<classes>
 			<class name="testng.Division" />
 		</classes>
-	</test>	
+	</test>
 	<test name="CalcTestSubtraction">
 		<classes>
 			<class name="testng.Subtraction" />
 		</classes>
-	</test>	
+	</test>
 	<test name="CalcTestMultiplication">
 		<classes>
 			<class name="testng.Multiplication" />
+		</classes>
+	</test> 
+
+
+	<test name="CalcTestIsNegativeTest">	
+		<classes>
+			<class name="testng.IsNegativeTest" />
+		</classes>
+	</test>
+	
+	<test name="CalcTestIsPositivetest">	
+		<classes>
+			<class name="testng.IsPositiveTest" />
 		</classes>
 	</test>
 </suite>
