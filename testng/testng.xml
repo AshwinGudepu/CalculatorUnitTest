@@ -65,7 +65,9 @@
 	<test name="DependentAttributeUsage">
 		<groups>
 			<run>
-				<include name="database" />				
+				<include name="database" />	
+				<include name="login" />
+				<exclude name="loginFailure" />				
 			</run>
 		</groups>
 		<classes>

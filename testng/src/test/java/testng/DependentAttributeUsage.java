@@ -21,6 +21,16 @@ public class DependentAttributeUsage {
 		System.out.println("Connection Successfull");
 	}	
 
+	@Test(groups = "login")
+	public void appLogin() {
+		System.out.println("Application Login");
+	}
+	
+	@Test(groups = "loginFailure")
+	public void appLoginFail() {
+		System.out.println("Application Failed Login");
+	}
+	
 	@Test(dependsOnGroups = { "database" })
 	public void runFinal() {
 		System.out.println("Run");
