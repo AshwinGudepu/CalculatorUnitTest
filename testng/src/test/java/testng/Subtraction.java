@@ -1,5 +1,7 @@
 package testng;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -45,9 +47,19 @@ public class Subtraction extends BaseCalculator {
 		Assert.assertEquals(result, -15);
 	}
 	
-	@Test
+	@Test (dependsOnMethods="subTwoNumbers")
 	public void subOnePositiveAndOneNegativeNumber() {
 		long result = calculator.sub(10, -5);		
 		Assert.assertEquals(result, 15);
+	}
+	
+	@Test (dependsOnMethods="subDepentTest2")
+	public void subDepentTest1() {	
+		assertEquals(true, true);		
+	}
+	
+	@Test
+	public void subDepentTest2() {
+		assertEquals(true, false);
 	}
 }

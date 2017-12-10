@@ -17,8 +17,8 @@ public class AdditionTest extends BaseCalculator {
 		
 	@Test
 	@Parameters({ "firstNum", "secondNum", "expectedRes" })
-	public void sumOfTwoNumbers(long firstNumber, long secondNumber, long expected) {
-		long result = calculator.sum(firstNumber, secondNumber);
+	public void sumOfTwoNumbers(long firstNum, long secondNum, long expected) {
+		long result = calculator.sum(firstNum, secondNum);
 		Assert.assertEquals(result, expected);
 	}
 
@@ -49,5 +49,5 @@ public class AdditionTest extends BaseCalculator {
 	public void sumOfOnePostiveNumberAndZero() {
 		long result = calculator.sum(5, 0);
 		Assert.assertEquals(result, 5);
-	}	
+	}
 }
