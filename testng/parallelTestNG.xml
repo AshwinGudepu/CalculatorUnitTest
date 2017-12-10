@@ -1,73 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="CalculatorTest" verbose="1">
-	<test name="CalcTestAdd">
-		<parameter name="firstNum" value="10"></parameter>
-		<parameter name="secondNum" value="20"></parameter>
-		<parameter name="expectedRes" value="30"></parameter>			
+<suite name="CalculatorTest" thread-count="3" verbose="1" parallel="tests">
+	<test name="CalcTestSubtractionMultiplication">
 		<classes>
-			<class name="testng.AdditionTest" />
-		</classes>
-	</test>
-	<test name="CalcTestDivide">
-		<parameter name="firstNumber" value="9"></parameter>
-		<parameter name="secondNumber" value="3"></parameter>
-		<parameter name="expected" value="3"></parameter>
-		<classes>
-			<class name="testng.Division" />
-		</classes>
-	</test>
-	<test name="CalcTestSubtraction">
-		<classes>
-			<class name="testng.Subtraction" />
-		</classes>
-	</test>
-	
-	<test name="CalcTestMultiplication">
-	<groups>
-			<run>
-				<include name="Function" />
-			</run>
-		</groups>
-		<classes>
+			<class name="testng.Subtraction" />	
 			<class name="testng.Multiplication" />
 		</classes>
-	</test>
-	
-	<test name="CalcTestIsNegativeTest">
-		<classes>
-			<class name="testng.IsNegativeTest" />
-		</classes>
-	</test>
-	<test name="CalcTestIsPositivetest">
-		<classes>
-			<class name="testng.IsPositiveTest" />
-		</classes>
-	</test>
-	<test name="CalcTestIsCosTest">
-		<classes>
-			<class name="testng.CosTest" />
-		</classes>
-	</test>
-	<test name="CalcTestIsCtgTest">
-		<classes>
-			<class name="testng.CtgTest" />
-		</classes>
-	</test>
-	<test name="CalcTestIsTanTest">
-		<classes>
-			<class name="testng.TanTest" />
-		</classes>
-	</test>
-	<test name="CalcTestIsSquareRootTest">
-		<classes>
-			<class name="testng.SquareRootTest" />
-		</classes>
-	</test>
-	<test name="CalcTestIsSinTest">
-		<classes>
-			<class name="testng.SinTest" />
-		</classes>
-	</test>
-
+	</test> 
 </suite>
