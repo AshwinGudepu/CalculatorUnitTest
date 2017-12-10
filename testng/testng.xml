@@ -57,4 +57,10 @@
 			<class name="testng.SquareRootTest" />
 		</classes>
 	</test>
+	<test name="CalcTestIsSinTest">
+		<classes>
+			<class name="testng.SinTest" />
+		</classes>
+	</test>
+
 </suite>
