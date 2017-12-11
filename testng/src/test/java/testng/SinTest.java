@@ -8,11 +8,6 @@ import com.epam.tat.module4.Calculator;
 
 public class SinTest extends BaseCalculator {
 	
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
-	
 	@Test(dataProvider = "numbersProvider")
 	public void sinFunction(double degrees,double expected) {
 		double result = calculator.sin(degrees);

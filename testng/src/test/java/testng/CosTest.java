@@ -8,11 +8,6 @@ import com.epam.tat.module4.Calculator;
 
 public class CosTest extends BaseCalculator {
 	
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
-	
 	@Test
 	public void cos0() {
 		double result = calculator.cos(0);

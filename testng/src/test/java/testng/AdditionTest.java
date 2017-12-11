@@ -9,11 +9,6 @@ import org.testng.annotations.Test;
 import com.epam.tat.module4.Calculator;
 
 public class AdditionTest extends BaseCalculator {	
-	
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
 		
 	@Test
 	@Parameters({ "firstNum", "secondNum", "expectedRes" })

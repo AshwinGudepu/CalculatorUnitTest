@@ -9,11 +9,6 @@ import com.epam.tat.module4.Calculator;
 
 public class Multiplication extends BaseCalculator {
 	
-	@BeforeSuite
-	public void createCalcObject(){
-		calculator=new Calculator();		
-	}	
-	
 	@Test
 	public void multipicationOfTwoNumbers(){
 		long result=calculator.mult(10, 10);

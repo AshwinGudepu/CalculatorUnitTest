@@ -7,11 +7,6 @@ import com.epam.tat.module4.Calculator;
 
 public class PowerTest extends BaseCalculator {
 	
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
-	
 	@Test
 	public void powerOfPositiveNumber() {
 		double result = calculator.pow(2,2);

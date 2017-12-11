@@ -11,11 +11,6 @@ import org.testng.annotations.Test;
 import com.epam.tat.module4.Calculator;
 
 public class Subtraction extends BaseCalculator {
-	
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
 
 	@Test(dataProvider = "subtractingFunctionality")
 	public void subtractionOfTwoNumbers(long firstNumber, long secondNumber, long expected) {

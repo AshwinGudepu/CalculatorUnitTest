@@ -6,11 +6,6 @@ import org.testng.annotations.Test;
 import com.epam.tat.module4.Calculator;
 
 public class SquareRootTest extends BaseCalculator{
-
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
 	
 	@Test
 	public void sqrtOfPositiveNumber() {

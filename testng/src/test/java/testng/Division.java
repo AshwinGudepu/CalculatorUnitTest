@@ -10,11 +10,6 @@ import com.epam.tat.module4.Calculator;
 
 public class Division extends BaseCalculator {
 		
-	@BeforeSuite
-	public void createCalcObject(){
-		calculator=new Calculator();		
-	}	
-	
 	@Test
 	@Parameters({ "firstNumber", "secondNumber", "expected" })
 	public void divisionOfTwoNumbers(long firstNumber, long secondNumber, long expected) {

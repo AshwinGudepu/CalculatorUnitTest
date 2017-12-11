@@ -12,11 +12,6 @@ import test.tmp.AssertEqualsTest;
 
 public class IsNegativeTest extends BaseCalculator {	
 	
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
-	
 	@Test
 	public void isNegative(){
 		boolean result=calculator.isNegative(-123);

@@ -7,11 +7,6 @@ import org.testng.annotations.Test;
 import com.epam.tat.module4.Calculator;
 
 public class CtgTest extends BaseCalculator {
-
-	@BeforeSuite
-	public void setUp(){
-		calculator=new Calculator();		
-	}
 	
 	@Test
 	public void ctg0() {
