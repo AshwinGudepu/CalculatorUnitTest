@@ -32,7 +32,7 @@ public class DependentAttributeUsage {
 	}
 	
 	@Test(dependsOnGroups = { "database" })
-	public void runFinal() {
-		System.out.println("Run");
+	public void runDb() {
+		System.out.println("runDb");
 	}
 }
