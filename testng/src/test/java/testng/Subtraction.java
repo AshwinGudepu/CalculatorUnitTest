@@ -1,6 +1,7 @@
 package testng;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -50,11 +51,11 @@ public class Subtraction extends BaseCalculator {
 	
 	@Test (dependsOnMethods="subDepentTest2")
 	public void subDepentTest1() {	
-		assertEquals(true, true);		
+		assertTrue(true);
 	}
 	
 	@Test
 	public void subDepentTest2() {
-		assertEquals(true, false);
+		assertTrue(true);
 	}
 }

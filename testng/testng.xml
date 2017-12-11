@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="CalculatorTest" verbose="1" parallel="methods" thread-count="5">
+<suite name="CalculatorTest" verbose="1">
 	<test name="CalcTestAdd">
 		<parameter name="firstNum" value="10"></parameter>
 		<parameter name="secondNum" value="20"></parameter>
@@ -17,7 +17,7 @@
 			<class name="testng.Division" />
 		</classes>
 	</test>
-	<test name="CalcTestSubtractionMultiplication">
+	<test name="CalcTestSubtractionMultiplication"  parallel="classes" thread-count="5" >
 		<classes>
 			<class name="testng.Subtraction" />	
 			<class name="testng.Multiplication" />
