@@ -2,12 +2,21 @@ package testng;
 
 import static org.testng.Assert.assertEquals;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.epam.tat.module4.Calculator;
 
 public class Multiplication extends BaseCalculator {
+	
+	@BeforeMethod
+	public void multiplication(){
+		calculator=null;
+		calculator=new Calculator();	
+		System.out.println("Before Method");
+	}
 	
 	@Test
 	public void multipicationOfTwoNumbers(){
@@ -39,4 +48,10 @@ public class Multiplication extends BaseCalculator {
 		assertEquals(result, 0);		
 	}
 
+	@AfterMethod
+	public void afterMultiplication(){
+		calculator=null;	
+		System.out.println("After Method");
+	}
+	
 }
