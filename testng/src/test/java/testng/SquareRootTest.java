@@ -1,9 +1,7 @@
 package testng;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import com.epam.tat.module4.Calculator;
 
 public class SquareRootTest extends BaseCalculator{
 	

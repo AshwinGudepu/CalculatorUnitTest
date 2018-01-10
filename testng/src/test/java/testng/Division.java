@@ -1,12 +1,8 @@
 package testng;
-
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import com.epam.tat.module4.Calculator;
 
 public class Division extends BaseCalculator {
 		
@@ -30,7 +26,7 @@ public class Division extends BaseCalculator {
 
 	@Test(expectedExceptions=NumberFormatException.class,expectedExceptionsMessageRegExp ="Attempt to divide by zero")	
 	public void divideByZero() {
-		long result = calculator.div(1, 0);		
+		calculator.div(1, 0);				
 	}	
 	
 }

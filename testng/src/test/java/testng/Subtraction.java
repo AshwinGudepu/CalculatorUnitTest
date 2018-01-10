@@ -1,15 +1,9 @@
 package testng;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.epam.tat.module4.Calculator;
 
 public class Subtraction extends BaseCalculator {
 

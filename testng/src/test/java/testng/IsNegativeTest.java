@@ -1,16 +1,11 @@
 package testng;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import com.epam.tat.module4.Calculator;
-
-import test.tmp.AssertEqualsTest;
 
 public class IsNegativeTest extends BaseCalculator {
 
