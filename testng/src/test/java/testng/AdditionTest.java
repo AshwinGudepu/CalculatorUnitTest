@@ -1,12 +1,9 @@
 package testng;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.epam.tat.module4.Calculator;
 
 public class AdditionTest extends BaseCalculator {	
 		
